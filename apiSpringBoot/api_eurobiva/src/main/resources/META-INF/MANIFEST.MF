@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.eurofeedback_brasil.eurobiva.api_eurobiva.ApiEurobivaApp
+ lication
+
