@@ -1,0 +1,21 @@
+  # docker-compose.yaml
+  version: '3.8'
+  services:
+    jenkins_maven:
+      build:
+        context: ./docker  
+        dockerfile: dockerfile  
+      container_name: jenkins-flutter
+      privileged: true
+      user: root
+      ports:
+       - 8080:8080
+       - 50000:50000
+      volumes:
+        - ./jenkins_compose/jenkins_configuration:/var/jenkins_home
+        - /var/run/docker.sock:/var/run/docker.sock
+      environment:
+        - SMTP_SERVER=smtp.gmail.com
+        - SMTP_PORT=587
+        - SMTP_USERNAME=pedrodaluzmota208@gmail.com
+        - SMTP_PASSWORD=fpqi qgxq cdvb cbmi
